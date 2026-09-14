@@ -44,9 +44,9 @@ def detect_target(filepass):
     coordinates_x["right"] = right[0]
     coordinates_y["right"] = right[1]
 
-    cv2.line(img,(coordinates_x["top"],coordinates_y["top"]),(coordinates_x["right"],coordinates_y["right"]),(100,0,0),thickness=10,lineType=cv2.LINE_8,shift=0)
-    cv2.line(img,(coordinates_x["right"],coordinates_y["right"]),(coordinates_x["left"],coordinates_y["left"]),(100,0,0),thickness=10,lineType=cv2.LINE_8,shift=0)
-    cv2.line(img,(coordinates_x["left"],coordinates_y["left"]),(coordinates_x["top"],coordinates_y["top"]),(100,0,0),thickness=10,lineType=cv2.LINE_8,shift=0)
+    cv2.line(img,(coordinates_x["top"],coordinates_y["top"]),(coordinates_x["right"],coordinates_y["right"]),(100,0,0),thickness=6,lineType=cv2.LINE_8,shift=0)
+    cv2.line(img,(coordinates_x["right"],coordinates_y["right"]),(coordinates_x["left"],coordinates_y["left"]),(100,0,0),thickness=6,lineType=cv2.LINE_8,shift=0)
+    cv2.line(img,(coordinates_x["left"],coordinates_y["left"]),(coordinates_x["top"],coordinates_y["top"]),(100,0,0),thickness=6,lineType=cv2.LINE_8,shift=0)
 
     cv2.imwrite("result1.jpg",img)
     center_x = (top[0] + left[0] + right[0]) / 3

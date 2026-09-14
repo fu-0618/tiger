@@ -12,7 +12,7 @@ height = 1080
 width = 1920
 
 def detect_target(filepass):
-    filepass="C:/Users/delic/Downloads/200cm (1).jpg"
+    filepass="C:/Users/delic/Downloads/n200cm (1).jpg"
     img=cv2.imread(filepass)
     hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
     mask1=cv2.inRange(hsv,low_color1,high_color1)
@@ -52,5 +52,5 @@ def detect_target(filepass):
     center_x = (top[0] + left[0] + right[0]) / 3
     return center_x
 
-center_x=detect_target("C:/Users/delic/Downloads/200cm (1).jpg")
+center_x=detect_target("C:/Users/delic/Downloads/n200cm (1).jpg")
 print (center_x)
